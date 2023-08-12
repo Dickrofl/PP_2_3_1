@@ -13,8 +13,6 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-
-
 import javax.persistence.EntityManager;
 import javax.sql.DataSource;
 import java.util.Objects;
@@ -27,6 +25,7 @@ import java.util.Properties;
 @ComponentScan("dao")
 public class AppConfig {
     private final Environment environment;
+
     @Autowired
     public AppConfig(Environment environment) {
         this.environment = environment;

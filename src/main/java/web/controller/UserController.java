@@ -18,32 +18,32 @@ public class UserController {
     UserDao userService;
 
     @GetMapping("/")
-    public String getUsersPage(Model model){
+    public String getUsersPage(Model model) {
         model.addAttribute("newuser", new User());
         model.addAttribute("user", userService.getAllUsers());
         return "index";
     }
 
     @PostMapping("/new")
-    public String addUser(@ModelAttribute("newuser") User user){
+    public String addUser(@ModelAttribute("newuser") User user) {
         userService.saveUser(user);
         return "redirect:/";
     }
 
     @GetMapping("/delete/{id}")
-    public String deleteUser(@PathVariable("id") long id){
+    public String deleteUser(@PathVariable("id") long id) {
         userService.removeUserById(id);
         return "redirect:/";
     }
 
     @GetMapping("/edit/{id}")
-    public String editPage(@PathVariable("id") long id, Model model){
+    public String editPage(@PathVariable("id") long id, Model model) {
         model.addAttribute("user", userService.getUserById(id));
         return "edit";
     }
 
     @PostMapping("/edit")
-    public String editUser(@ModelAttribute("user") User user){
+    public String editUser(@ModelAttribute("user") User user) {
         userService.updateUser(user);
         return "redirect:/";
     }

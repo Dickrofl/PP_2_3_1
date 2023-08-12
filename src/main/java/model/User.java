@@ -6,7 +6,6 @@ import javax.persistence.*;
 import javax.validation.constraints.Size;
 
 
-
 @Table(name = "users")
 @Entity
 public class User {
@@ -14,7 +13,7 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
-    @Column(name = "id",unique=true, nullable = false)
+    @Column(name = "id", unique = true, nullable = false)
     private long id;
 
     @NotNull
