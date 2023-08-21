@@ -2,7 +2,6 @@ package dao;
 
 import model.User;
 import org.springframework.stereotype.Repository;
-
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
@@ -38,7 +37,7 @@ public class UserDaoImp implements UserDao {
 
     @Override
     public List<User> getAllUsers() {
-        return entityManager.createQuery("SELECT user FROM User user", User.class).getResultList();
+        return entityManager.createQuery("FROM User", User.class).getResultList();
     }
 
     @Override
