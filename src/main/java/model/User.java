@@ -16,11 +16,11 @@ public class User {
 
     @NotNull
     @Size(min = 2, max = 100, message = "The name must be between 2 and 100 characters")
-    @Column(name = "firstName")
+    @Column(name = "first_Name")
     private String firstName;
     @NotNull
     @Size(min = 2, max = 100, message = "The Last Name must be between 2 and 100 characters")
-    @Column(name = "lastName")
+    @Column(name = "last_Name")
     private String lastName;
 
     @NotNull
