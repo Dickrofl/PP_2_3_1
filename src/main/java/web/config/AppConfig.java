@@ -22,7 +22,7 @@ import java.util.Properties;
 @EnableWebMvc
 @EnableTransactionManagement
 @PropertySource("classpath:dp.properties")
-@ComponentScan("dao")
+@ComponentScan("service")
 public class AppConfig {
     private final Environment environment;
 

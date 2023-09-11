@@ -1,18 +1,18 @@
 package web.controller;
 
-import dao.UserDao;
 import model.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import service.UserService;
 
 
 @Controller
 public class UserController {
 
-    private  final UserDao userService;
+    private  final UserService userService;
 
-    public UserController(UserDao userService) {
+    public UserController(UserService userService) {
         this.userService = userService;
     }
 
